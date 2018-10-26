@@ -8,7 +8,10 @@ create_table_customer = "CREATE table test_customer (" \
 
 create_table_branch = "CREATE TABLE branch (" \
                       "id SERIAL PRIMARY KEY , " \
-                      "address VARCHAR(80), " \
+                      "street VARCHAR(80), " \
+                      "city VARCHAR(40), " \
+                      "state VARCHAR(40), " \
+                      "zip VARCHAR(5), " \
                       "customer_id INTEGER NOT NULL , " \
                       "FOREIGN KEY (customer_id) REFERENCES test_customer (id), " \
                       "UNIQUE (address, customer_id))"
